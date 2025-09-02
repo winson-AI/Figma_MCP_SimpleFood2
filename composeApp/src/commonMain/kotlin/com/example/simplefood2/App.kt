@@ -387,14 +387,26 @@ private fun BottomPill() {
 
         Row(
             modifier = Modifier
-                .size(width = 300.dp, height = 55.dp),
-            horizontalArrangement = Arrangement.SpaceEvenly,
+                .size(width = 336.dp, height = 55.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Image(painter = painterResource(Res.drawable.ic_home), contentDescription = "Home", modifier = Modifier.size(24.dp).background(Color(0xFFFF6B00)))
-            Image(painter = painterResource(Res.drawable.ic_collect), contentDescription = "Collect", modifier = Modifier.size(24.dp))
-            Image(painter = painterResource(Res.drawable.ic_compass), contentDescription = "Compass", modifier = Modifier.size(24.dp))
-            Image(painter = painterResource(Res.drawable.ic_profile), contentDescription = "Profile", modifier = Modifier.size(24.dp))
+            Box(
+                modifier = Modifier
+                    .size(55.dp)
+                    .clip(CircleShape)
+                    .background(Color(0xFFFF6B00)),
+                contentAlignment = Alignment.Center
+            ) {
+                Image(
+                    painter = painterResource(Res.drawable.ic_home),
+                    contentDescription = "Home",
+                    modifier = Modifier.size(30.dp)
+                )
+            }
+            Image(painter = painterResource(Res.drawable.ic_collect), contentDescription = "Collect", modifier = Modifier.size(30.dp))
+            Image(painter = painterResource(Res.drawable.ic_compass), contentDescription = "Compass", modifier = Modifier.size(30.dp))
+            Image(painter = painterResource(Res.drawable.ic_profile), contentDescription = "Profile", modifier = Modifier.size(30.dp))
         }
     }
 }
